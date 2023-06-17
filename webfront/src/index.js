@@ -27,14 +27,17 @@ root.render(
     <div>
       {/* 환영합니다 */}
       <div style={{
-        marginTop: '50px'
+        marginTop: '50px',
+        textAlign: 'center'
       }}>
         <img className='welcome' src='img/welcome.svg' />
       </div>
     </div>
     <div>
       {/* 동아리 소개페이지 */}
-      <div>
+      <div style={{
+        textAlign: 'center'
+      }}>
         <img className='introduce' src='img/introduce.svg' />
       </div>
     </div>
