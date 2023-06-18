@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './components/footer';
 import Grid from './components/grid';
 import Header from './components/header';
 import Introduce from './components/introduce';
@@ -17,6 +18,7 @@ function App() {
       </div>
       <Grid/>
       <Introduce/>
+      <Footer/>
     </div>
   );
 }

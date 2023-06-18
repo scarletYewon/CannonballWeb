@@ -1,3 +1,4 @@
+import { url } from "inspector";
 import React from "react";
 
 function Grid() {
@@ -5,16 +6,20 @@ function Grid() {
     <div
       id="grid"
       style={{
-        display: 'inline-block',
+        height: '23rem',
+        background: '#F2F2F2',
+        paddingTop: '3rem',
+        paddingBottom: '3rem',
+        display: 'flex',
         width: '100%',
-        height: '20rem',
         justifyContent: 'center',
       }}
     >
       <div
         id="goLeft"
         style={{
-          
+          marginRight: '3rem',
+          marginTop: '10rem',
         }}
       >
         <img src="img/goleft.svg"/>
@@ -32,27 +37,52 @@ function Grid() {
             width: '20rem',
             height: '20rem',
             color: 'black',
-            border: '1px solid #000000',
+            border: '1px solid #121212',
+            borderRadius: '8px',
+            display: 'inline-block',
             textAlign: 'center',
+            verticalAlign: 'middle',
+            backgroundImage: 'url("img/viewbackground1.svg")'
           }}
         >
           <div
             id="v1date"
+            style={{
+              marginTop: '4rem',
+              fontSize: '1.5em',
+              fontWeight: '600',
+            }}
           >
             04.25.SAT
           </div>
           <div
             id="v1name"
             style={{
-              width: '10rem',
+              marginTop: '1rem',
+              fontSize: '1.5em',
+              fontWeight: '600',
             }}
           >
-            캐논볼 제 25회 정기전 참가신청
+            캐논볼<br/>제 25회 정기전<br/>참가신청
           </div>
           <div
             id="v1join"
+            style={{
+              width: '8rem',
+              height: '1rem',
+              margin: '3rem auto',
+              fontSize: '.8em',
+              fontWeight: '400',
+              textAlign: 'center',
+              padding: '.5rem 1rem',
+              color: 'white',
+              border: '1px solid #121212',
+              borderRadius: '4px',
+              background: 'rgb(0,0,0,0.8)',
+
+            }}
           >
-            바로 신청하기
+            바로 신청하기 {'>'}
           </div>
         </div>
         <div
@@ -63,30 +93,60 @@ function Grid() {
             height: '20rem',
             color: 'black',
             border: '1px solid #000000',
+            borderRadius: '8px',
+            display: 'inline-block',
             textAlign: 'center',
+            verticalAlign: 'middle',
+            backgroundImage: 'url("img/viewbackground2.svg")'
           }}
         >
           <div
             id="v2date"
+            style={{
+              marginTop: '4rem',
+              fontSize: '1.5em',
+              fontWeight: '600',
+            }}
           >
-            05.05.MON
+            05.25.THU
           </div>
           <div
             id="v2name"
+            style={{
+              marginTop: '1rem',
+              fontSize: '1.5em',
+              fontWeight: '600',
+            }}
           >
-            캐논볼 번개조 참가신청
+            캐논볼<br/>번개조<br/>참가신청
           </div>
           <div
             id="v2join"
+            style={{
+              width: '8rem',
+              height: '1rem',
+              margin: '3rem auto',
+              fontSize: '.8em',
+              fontWeight: '400',
+              textAlign: 'center',
+              padding: '.5rem 1rem',
+              color: 'white',
+              border: '1px solid #000000',
+              borderRadius: '4px',
+              background: 'rgb(0,0,0,0.8)',
+
+            }}
           >
-            바로 신청하기
+            바로 신청하기 {'>'}
           </div>
         </div>
+        
       </div>
       <div
         id="goRight"
         style={{
-          
+          marginLeft: '3rem',
+          marginTop: '10rem',
         }}
       >
         <img src="img/goright.svg"/>

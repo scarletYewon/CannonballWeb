@@ -34,7 +34,7 @@ function Header() {
         }}
       >
         <div
-          id='item1'
+          id='signIn'
           style={{
             width: '5rem',
             display: 'block',
@@ -50,7 +50,7 @@ function Header() {
           Sign In
         </div>
         <div
-          id='item2'
+          id='signUP'
           style={{
             width: '5rem',
             display: 'block',
