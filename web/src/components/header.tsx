@@ -1,6 +1,7 @@
 import React from "react";
 
 function Header() {
+
   return (
     <div
         id='header'
@@ -19,7 +20,7 @@ function Header() {
           height: '3rem',
           marginLeft: '8rem'
         }}
-        src='img/logo.svg'/>
+        src='img/logorow.svg'/>
       <div
         id='itemBox'
         style={{
