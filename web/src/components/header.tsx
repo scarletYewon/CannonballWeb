@@ -5,11 +5,6 @@ function Header() {
     <div
         id='header'
         style={{
-          position: 'sticky',
-          top: 0,
-          width: '15rem',
-          height: '3rem',
-          padding: '.5rem',
           display: 'inline',
           justifyContent: 'center',
           alignItems: 'center',
@@ -18,15 +13,21 @@ function Header() {
       <img
         id='logo'
         style={{
+          marginTop: '.8rem',
+          marginBottom: '.8rem',
           width: '15rem',
           height: '3rem',
+          marginLeft: '8rem'
         }}
         src='img/logo.svg'/>
       <div
         id='itemBox'
         style={{
+          marginTop: '.8rem',
+          marginBottom: '.8rem',
           height: '3rem',
           display: 'flex',
+          marginRight: '8rem',
           justifyContent: 'center',
           alignItems: 'center',
           float: 'right',
