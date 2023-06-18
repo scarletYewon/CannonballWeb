@@ -3,7 +3,18 @@ import React from "react";
 function Introduce() {
   return (
     <div>
-      캐논볼을 소개합니다람쥥
+      <div>
+        <img
+          style={{
+            width: '100%'
+          }}
+          src="img/intro1.png"/>
+          <img
+          style={{
+            width: '100%'
+          }}
+          src="img/intro2.png"/>
+      </div>
     </div>
   );
 }
