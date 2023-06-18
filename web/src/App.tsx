@@ -6,7 +6,15 @@ import Introduce from './components/introduce';
 function App() {
   return (
     <div>
-      <Header/>
+      <div
+        style={{
+          background: 'white',
+          position: 'sticky',
+          top: '0',
+        }}
+      >
+        <Header/>
+      </div>
       <Grid/>
       <Introduce/>
     </div>
