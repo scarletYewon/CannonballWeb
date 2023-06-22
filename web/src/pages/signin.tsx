@@ -2,38 +2,49 @@ import React from "react";
 
 function Signin() {
   return(
-    <div>
-      <img src="img/logocol.svg"/>
+    <div
+      style={{
+        height: '100vh',
+        // backgroundColor: 'red',
+        display: 'flex',
+        alignItems: 'center',
+      }}
+    >
       <div
         style={{
-          display: 'inline-block',
-
+          margin: '0 auto'
         }}
       >
+        <img src="img/logocol.svg"/>
         <div
           style={{
+          }}
+        >
+          <div
+            style={{
 
-          }}
-        >
-          id
-        </div>
-        <div
-          style={{
-            
-          }}
-        >
-          pwd
-        </div>
-      </div>
-      <div>
-        login
-      </div>
-      <div>
-        <div>
-          회원가입
+            }}
+          >
+            email
+          </div>
+          <div
+            style={{
+              
+            }}
+          >
+            password
+          </div>
         </div>
         <div>
-          탈퇴하기
+          LOGIN
+        </div>
+        <div>
+          <div>
+            회원가입
+          </div>
+          <div>
+            탈퇴하기
+          </div>
         </div>
       </div>
     </div>
