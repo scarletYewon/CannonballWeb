@@ -1,25 +1,16 @@
 import React from 'react';
-import Footer from './components/footer';
-import Grid from './components/grid';
-import Header from './components/header';
-import Introduce from './components/introduce';
+import { Route, Routes } from 'react-router-dom'
+import Main from './pages/main';
+import Signin from './pages/signin';
+import Signup from './pages/signup';
 
-function App() {
+const App = (): JSX.Element => {
   return (
-    <div>
-      <div
-        style={{
-          background: 'white',
-          position: 'sticky',
-          top: '0',
-        }}
-      >
-        <Header/>
-      </div>
-      <Grid/>
-      <Introduce/>
-      <Footer/>
-    </div>
+    <Routes>
+      <Route path='/' element={<Main/>}/>
+      <Route path='/signin' element={<Signin/>}/>
+      <Route path='/signup' element={<Signup/>}/>
+    </Routes>
   );
 }
 

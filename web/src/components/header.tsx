@@ -1,6 +1,18 @@
 import React from "react";
+import { Route, Routes, useNavigate } from 'react-router-dom'
+import Main from '../pages/main';
+import Signin from '../pages/signin';
+import Signup from '../pages/signup';
 
 function Header() {
+  const navigate = useNavigate();
+
+  const goSignin = () => {
+    navigate('/signin');
+  }
+  const goSignup = () => {
+    navigate('/signup');
+  }
 
   return (
     <div
@@ -47,6 +59,7 @@ function Header() {
             borderRadius: '4px',
             background: 'white',
           }}
+          onClick={goSignin}
         >
           Sign In
         </div>
@@ -63,11 +76,14 @@ function Header() {
             borderRadius: '4px',
             background: 'black',
           }}
+          onClick={goSignup}
         >
           Sign Up
         </div>
       </div>
     </div>
+
+    
   );
 }
 
