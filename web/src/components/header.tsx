@@ -13,6 +13,9 @@ function Header() {
   const goSignup = () => {
     navigate('/signup');
   }
+  const goMain = () => {
+    navigate('/');
+  }
 
   return (
     <div
@@ -32,7 +35,9 @@ function Header() {
           height: '3rem',
           marginLeft: '8rem'
         }}
-        src='img/logorow.svg'/>
+        src='img/logorow.svg'
+        onClick={goMain}
+        />
       <div
         id='itemBox'
         style={{

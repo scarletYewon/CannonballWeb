@@ -1,49 +1,78 @@
 import React from "react";
+import Header from "../components/header";
 
 function Signin() {
   return(
-    <div
-      style={{
-        height: '100vh',
-        // backgroundColor: 'red',
-        display: 'flex',
-        alignItems: 'center',
-      }}
-    >
+    <div>
+      <Header/>
       <div
         style={{
-          margin: '0 auto'
+          height: '80vh',
+          // backgroundColor: 'red',
+          display: 'flex',
+          alignItems: 'center',
         }}
       >
-        <img src="img/logocol.svg"/>
         <div
           style={{
+            margin: '0 auto'
           }}
         >
-          <div
-            style={{
+          <img src="img/logocol.svg"/>
+          <div>
+            <div
+              style={{
 
-            }}
-          >
-            email
+              }}
+            >
+              <input
+                placeholder="email"
+                type={'email'}
+                style={{
+                  width: '17em',
+                  height: '2.5em',
+                  marginTop: '1em',
+                }}
+              />
+            </div>
+            <div
+              style={{
+                
+              }}
+            >
+              <input
+                placeholder="password"
+                type={'password'}
+                style={{
+                  width: '17em',
+                  height: '2.5em',
+                  marginTop: '.5em',
+                }}
+              />
+            </div>
           </div>
           <div
             style={{
-              
+              width: '14.7em',
+              height: '2.5em',
+              backgroundColor: 'black',
+              textAlign: 'center',
+              color: 'white',
             }}
           >
-            password
+            LOGIN
           </div>
-        </div>
-        <div>
-          LOGIN
-        </div>
-        <div>
-          <div>
-            회원가입
-          </div>
-          <div>
-            탈퇴하기
+          <div
+            style={{
+              display: 'flex',
+            }}
+          >
+            <div>
+              회원가입
+            </div>
+            <div>
+              탈퇴하기
+            </div>
           </div>
         </div>
       </div>
