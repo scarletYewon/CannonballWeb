@@ -7,7 +7,7 @@ function Signin() {
       <Header/>
       <div
         style={{
-          height: '80vh',
+          height: '65vh',
           // backgroundColor: 'red',
           display: 'flex',
           alignItems: 'center',
@@ -26,8 +26,8 @@ function Signin() {
               }}
             >
               <input
-                placeholder="email"
-                type={'email'}
+                placeholder="학번"
+                type={'text'}
                 style={{
                   width: '17em',
                   height: '2.5em',
@@ -41,7 +41,7 @@ function Signin() {
               }}
             >
               <input
-                placeholder="password"
+                placeholder="비밀번호"
                 type={'password'}
                 style={{
                   width: '17em',
@@ -58,19 +58,37 @@ function Signin() {
               backgroundColor: 'black',
               textAlign: 'center',
               color: 'white',
+              marginTop: '.5em',
+              borderRadius: '5px',
             }}
           >
-            LOGIN
+            <div
+              style={{
+                paddingTop: '.7em',
+                fontSize: '15px',
+              }}
+            >
+              LOGIN
+            </div>
           </div>
           <div
             style={{
               display: 'flex',
+              marginTop: '.5em',
             }}
           >
-            <div>
+            <div
+              style={{
+                marginLeft: '1em',
+              }}
+            >
               회원가입
             </div>
-            <div>
+            <div
+              style={{
+                marginLeft: '6em',
+              }}
+            >
               탈퇴하기
             </div>
           </div>

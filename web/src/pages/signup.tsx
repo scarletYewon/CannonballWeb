@@ -26,7 +26,7 @@ function Signup() {
               }}
             >
               <input
-                placeholder="email"
+                placeholder="학번"
                 type={'email'}
                 style={{
                   width: '17em',
@@ -41,12 +41,72 @@ function Signup() {
               }}
             >
               <input
-                placeholder="password"
-                type={'password'}
+                placeholder="학과"
+                type={'text'}
                 style={{
                   width: '17em',
                   height: '2.5em',
                   marginTop: '.5em',
+                }}
+              />
+            </div>
+            <div
+              style={{
+
+              }}
+            >
+              <input
+                placeholder="비밀번호"
+                type={'password'}
+                style={{
+                  width: '17em',
+                  height: '2.5em',
+                  marginTop: '1em',
+                }}
+              />
+            </div>
+            <div
+              style={{
+
+              }}
+            >
+              <input
+                placeholder="비밀번호 확인"
+                type={'password'}
+                style={{
+                  width: '17em',
+                  height: '2.5em',
+                  marginTop: '1em',
+                }}
+              />
+            </div>
+            <div
+              style={{
+
+              }}
+            >
+              <input
+                placeholder="이름"
+                type={'text'}
+                style={{
+                  width: '17em',
+                  height: '2.5em',
+                  marginTop: '1em',
+                }}
+              />
+            </div>
+            <div
+              style={{
+
+              }}
+            >
+              <input
+                placeholder="전화번호"
+                type={'phone'}
+                style={{
+                  width: '17em',
+                  height: '2.5em',
+                  marginTop: '1em',
                 }}
               />
             </div>
@@ -58,21 +118,27 @@ function Signup() {
               backgroundColor: 'black',
               textAlign: 'center',
               color: 'white',
+              marginTop: '.5em',
+              borderRadius: '5px',
             }}
           >
-            LOGIN
+            <div
+              style={{
+                paddingTop: '.7em',
+                fontSize: '18px',
+              }}
+            >
+              SIGN UP
+            </div>
           </div>
           <div
             style={{
-              display: 'flex',
+              textAlign: 'center',
+              marginTop: '.5em',
+              fontSize: '18px',
             }}
           >
-            <div>
-              회원가입
-            </div>
-            <div>
-              탈퇴하기
-            </div>
+            LOGIN
           </div>
         </div>
       </div>
