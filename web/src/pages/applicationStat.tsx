@@ -55,7 +55,7 @@ function ApplicationStat() {
               borderRadius: '8px',
             }}
           >
-            나도 신청하기
+            나도 신청하기{'>'}
           </div>
         </div>
       </div>

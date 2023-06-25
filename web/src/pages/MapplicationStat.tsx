@@ -55,7 +55,7 @@ function MapplicationStat() {
               borderRadius: '8px',
             }}
           >
-            나도 신청하기
+            나도 신청하기{'>'}
           </div>
           {/* 여기서부터 조건부 div */}
           <div
