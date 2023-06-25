@@ -7,10 +7,11 @@ function Signup() {
       <Header/>
       <div
         style={{
-          height: '80vh',
+          height: '88vh',
           // backgroundColor: 'red',
           display: 'flex',
           alignItems: 'center',
+          background: '#f2f2f2',
         }}
       >
         <div

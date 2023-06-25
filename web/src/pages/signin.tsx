@@ -7,10 +7,10 @@ function Signin() {
       <Header/>
       <div
         style={{
-          height: '65vh',
-          // backgroundColor: 'red',
+          height: '88vh',
           display: 'flex',
           alignItems: 'center',
+          background: '#f2f2f2',
         }}
       >
         <div
