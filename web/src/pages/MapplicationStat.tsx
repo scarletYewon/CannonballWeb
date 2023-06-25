@@ -1,7 +1,15 @@
 import React from "react";
 import Header from "../components/header";
+import { useNavigate } from 'react-router-dom';
+import Mgrouping from "./Mgrouping";
 
 function MapplicationStat() {
+  const navigate = useNavigate();
+
+  const goGrouping = () => {
+    navigate('/Mgrouping');
+  }
+
   return(
     <div>
       <Header/>
@@ -75,6 +83,7 @@ function MapplicationStat() {
                 paddingLeft: '2em',
                 borderRadius: '8px',
               }}
+              onClick={goGrouping}
             >
               수정하기
             </div>

@@ -1,7 +1,14 @@
 import React from "react";
 import Header from "../components/header";
+import { useNavigate } from 'react-router-dom';
 
 function ApplicationStat() {
+  const navigate = useNavigate();
+
+  const goAppDone = () => {
+    navigate('/applicationstatdone');
+  }
+
   return(
     <div>
       <Header/>
@@ -54,6 +61,7 @@ function ApplicationStat() {
               paddingLeft: '5em',
               borderRadius: '8px',
             }}
+            onClick={goAppDone}
           >
             나도 신청하기{'>'}
           </div>

@@ -1,6 +1,17 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 function Grid() {
+  const navigate = useNavigate();
+
+  const goApply = () => {
+    navigate('/applicationStat');
+  }
+
+  const goMApply = () => {
+    navigate('/Mapplicationstat');
+  }
+
   return (
     <div
       id="grid"
@@ -43,6 +54,7 @@ function Grid() {
             verticalAlign: 'middle',
             backgroundImage: 'url("img/viewbackground1.svg")'
           }}
+          onClick={goApply}
         >
           <div
             id="v1date"
@@ -98,6 +110,7 @@ function Grid() {
             verticalAlign: 'middle',
             backgroundImage: 'url("img/viewbackground2.svg")'
           }}
+          onClick={goMApply}
         >
           <div
             id="v2date"

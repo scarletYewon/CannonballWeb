@@ -1,12 +1,20 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 function GroupCard() {
+  const navigate = useNavigate();
+
+  const goGroup = () => {
+    navigate('/group');
+  }
+  
   return (
     <div
       style={{
         margin:'.7em',
         background: 'white',
       }}
+      onClick={goGroup}
     >
       <img src="img/groupimg.svg"/>
       <div
