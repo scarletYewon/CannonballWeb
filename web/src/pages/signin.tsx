@@ -1,28 +1,44 @@
 import axios from "axios";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Header from "../components/header";
 
-function Signin() {
-  
-  const [value, setValue] = useState("");
+type MyFormProps = {
+  onSubmit: (form: { name: string; description: string }) => void;
+};
 
-  const onIDChange = (event: React.FormEvent<HTMLInputElement>) => {
-    const {
-      currentTarget: { value },
-    } = event;
-    setValue(value)
+
+function Signin({ onSubmit }: MyFormProps) {
+  
+  const [form, setForm] = useState({
+    name: '',
+    description: ''
+  });
+
+  const { name, description } = form;
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setForm({
+      ...form,
+      [name]: value
+    });
   };
 
-  const onIDSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log(value);
-  }
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // 여기도 모르니까 any 로 하겠습니다.
+    e.preventDefault();
+    onSubmit(form);
+    setForm({
+      name: '',
+      description: ''
+    }); // 초기화
+  };
 
-  const post = () => {
+  const AxLogIn = () => {
     axios.post('/cannonball/login',
         {
-          classNum : value,
-          passWord : 'dfdsfkds',
+          classNum : name,
+          passWord : description,
         }
     )
     .then(function(response){
@@ -50,58 +66,69 @@ function Signin() {
           }}
         >
           <img src="img/logocol.svg"/>
-          <div>
-            <form
-              onSubmit={onIDSubmit}
-            >
-              <input
-                value={value}
-                onChange={onIDChange}
-                placeholder="학번"
-                type={'text'}
-                style={{
-                  width: '17em',
-                  height: '2.5em',
-                  marginTop: '1em',
-                }}
-              />
-            </form>
-            <div
-              // onSubmit={onPWSubmit}
-            >
-              <input
-                // value={password}
-                // onChange={onPWChange}
-                placeholder="비밀번호"
-                type={'password'}
-                style={{
-                  width: '17em',
-                  height: '2.5em',
-                  marginTop: '.5em',
-                }}
-              />
-            </div>
-          </div>
-          <div
-            style={{
-              width: '14.7em',
-              height: '2.5em',
-              backgroundColor: 'black',
-              textAlign: 'center',
-              color: 'white',
-              marginTop: '.5em',
-              borderRadius: '5px',
-            }}
+          <form
+            onSubmit={handleSubmit}
           >
+            <div>
+              <div>
+                <input
+                  name="name"
+                  value={name}
+                  onChange={onChange}
+                  placeholder="학번"
+                  type={'text'}
+                  style={{
+                    width: '17em',
+                    height: '2.5em',
+                    marginTop: '1em',
+                  }}
+                />
+              </div>
+              <div>
+                <input
+                  name="description"
+                  value={description}
+                  onChange={onChange}
+                  placeholder="비밀번호"
+                  type={'password'}
+                  style={{
+                    width: '17em',
+                    height: '2.5em',
+                    marginTop: '.5em',
+                  }}
+                />
+              </div>
+            </div>
             <div
               style={{
-                paddingTop: '.7em',
-                fontSize: '15px',
+                // width: '14.7em',
+                // height: '2.5em',
+                // backgroundColor: 'black',
+                // textAlign: 'center',
+                // color: 'white',
+                marginTop: '.5em',
+                borderRadius: '5px',
               }}
             >
-              LOGIN
+              <button
+                type="submit"
+                style={{
+                  width: '14.7em',
+                  height: '2.5em',
+                  backgroundColor: 'black',
+                  textAlign: 'center',
+                  color: 'white',
+                // marginTop: '.5em',
+                  borderRadius: '5px',
+                  marginTop: '.7em',
+                  fontSize: '15px',
+                }}
+                onClick={AxLogIn}
+              >
+                LOGIN
+              </button>
             </div>
-          </div>
+          </form>
           <div
             style={{
               display: 'flex',

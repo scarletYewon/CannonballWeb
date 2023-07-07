@@ -10,11 +10,14 @@ import ApplicationStatDone from './pages/applicationStatDone';
 import MapplicationStat from './pages/MapplicationStat';
 import Group from './pages/group';
 
-const App = (): JSX.Element => {
+const App:React.FC = (): JSX.Element => {
+  const onSubmit = (form: { name: string, description: string}) => {
+    console.log(form);
+  }
   return (
     <Routes>
       <Route path='/' element={<Main/>}/>
-      <Route path='/signin' element={<Signin/>}/>
+      <Route path='/signin' element={<Signin onSubmit={onSubmit}/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/Mmember' element={<Mmember/>}/>
       <Route path='/Mgrouping' element={<Mgrouping/>}/>
