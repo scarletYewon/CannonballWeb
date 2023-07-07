@@ -35,11 +35,13 @@ function Signin({ onSubmit }: MyFormProps) {
   };
 
   const AxLogIn = () => {
-    axios.post('/cannonball/login',
+    const crossOriginIsolated = {withCredentials: true}
+    axios.post('https://cors-anywhere.herokuapp.com/http://49.50.172.239:8080/cannonball/login',
         {
           classNum : name,
-          passWord : description,
-        }
+          password : description,
+        },
+        crossOriginIsolated
     )
     .then(function(response){
       console.log(response);

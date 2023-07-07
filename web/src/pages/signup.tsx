@@ -1,7 +1,37 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import Header from "../components/header";
 
+// type MyFormProps = {
+//   onSubmit: (form: { classNum: string; description: string }) => void;
+// };
+
 function Signup() {
+  // const [form, setForm] = useState({
+  //   name: '',
+  //   description: '',
+  // });
+
+  // const { name, description } = form;
+
+  // const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const { name, value } = e.target;
+  //   setForm({
+  //     ...form,
+  //     [name]: value
+  //   });
+  // };
+
+  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   // 여기도 모르니까 any 로 하겠습니다.
+  //   e.preventDefault();
+  //   onSubmit(form);
+  //   setForm({
+  //     name: '',
+  //     description: '',
+  //   }); // 초기화
+  // };
+
   return(
     <div>
       <Header/>
@@ -28,7 +58,7 @@ function Signup() {
             >
               <input
                 placeholder="학번"
-                type={'email'}
+                type={'text'}
                 style={{
                   width: '17em',
                   height: '2.5em',
@@ -42,8 +72,8 @@ function Signup() {
               }}
             >
               <input
-                placeholder="학과"
-                type={'text'}
+                placeholder="비밀번호"
+                type={'password'}
                 style={{
                   width: '17em',
                   height: '2.5em',
@@ -57,7 +87,7 @@ function Signup() {
               }}
             >
               <input
-                placeholder="비밀번호"
+                placeholder="비밀번호 확인"
                 type={'password'}
                 style={{
                   width: '17em',
@@ -72,8 +102,8 @@ function Signup() {
               }}
             >
               <input
-                placeholder="비밀번호 확인"
-                type={'password'}
+                placeholder="학과"
+                type={'text'}
                 style={{
                   width: '17em',
                   height: '2.5em',
