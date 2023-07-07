@@ -1,7 +1,38 @@
-import React from "react";
+import axios from "axios";
+import React, { useRef, useState } from "react";
 import Header from "../components/header";
 
 function Signin() {
+  
+  const [value, setValue] = useState("");
+
+  const onIDChange = (event: React.FormEvent<HTMLInputElement>) => {
+    const {
+      currentTarget: { value },
+    } = event;
+    setValue(value)
+  };
+
+  const onIDSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log(value);
+  }
+
+  const post = () => {
+    axios.post('/cannonball/login',
+        {
+          classNum : value,
+          passWord : 'dfdsfkds',
+        }
+    )
+    .then(function(response){
+      console.log(response);
+    })
+    .catch(function(error){
+      console.log(error);
+    })
+  }
+
   return(
     <div>
       <Header/>
@@ -20,12 +51,12 @@ function Signin() {
         >
           <img src="img/logocol.svg"/>
           <div>
-            <div
-              style={{
-
-              }}
+            <form
+              onSubmit={onIDSubmit}
             >
               <input
+                value={value}
+                onChange={onIDChange}
                 placeholder="학번"
                 type={'text'}
                 style={{
@@ -34,13 +65,13 @@ function Signin() {
                   marginTop: '1em',
                 }}
               />
-            </div>
+            </form>
             <div
-              style={{
-                
-              }}
+              // onSubmit={onPWSubmit}
             >
               <input
+                // value={password}
+                // onChange={onPWChange}
                 placeholder="비밀번호"
                 type={'password'}
                 style={{
