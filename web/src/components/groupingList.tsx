@@ -1,7 +1,27 @@
 import React from "react";
+import axios from "axios";
 import { useNavigate } from 'react-router-dom'
 
 function GroupingList() {
+
+  const EventMemberDelete = () => {
+    axios.delete('http://49.50.172.239:8080/cannonball/withdrawRandom',
+        {
+          data: { // 서버에서 req.body.{} 로 확인할 수 있다.
+            classNum:'20212976' ,
+            randomName: '랜덤번개조',
+          },
+          withCredentials: true,
+        },
+        // crossOriginIsolated
+    )
+    .then(function(response){
+      console.log(response);
+    })
+    .catch(function(error){
+      console.log(error);
+    })
+  }
 
   return (
     <div
@@ -56,6 +76,7 @@ function GroupingList() {
             paddingLeft: '1.5em',
             borderRadius: '8px',
           }}
+          onClick={EventMemberDelete}
         >
           삭제
         </div>
