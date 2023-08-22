@@ -20,7 +20,8 @@ function Header() {
         display: 'flex',
       }}
     >
-      <img src="img/logo_white.png" />
+      {/* <img src="img/logo_white.png" /> */}
+      {/* 로고 수정 후 재반영 예정 */}
       <div
         style={{
           display: 'flex',
