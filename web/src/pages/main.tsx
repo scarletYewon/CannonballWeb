@@ -109,7 +109,7 @@ function Main() {
   const OrganizationGroupPost = () => {
     axios.post('http://49.50.172.239:8080/cannonball/organization-group',
       {
-        randomName: '랜덤번개조',
+        randomName: '랜덤조이름',
       }
     )
     .then(function(response){
@@ -168,8 +168,8 @@ function Main() {
     })
   }
 
-  const InformationGroupPut = () => {
-    axios.put('http://49.50.172.239:8080/cannonball/information-group',
+  const RandomGroupApplicaitonPut = () => {
+    axios.put('http://49.50.172.239:8080/cannonball/random-group-application',
       {
         randomName: '랜덤조이름',
         classNum: '20213047',
@@ -403,9 +403,9 @@ function Main() {
           margin: '10px',
           background:'yellow',
         }}
-        onClick={InformationGroupPut}
+        onClick={RandomGroupApplicaitonPut}
       >
-        InformationGroup_PUT
+        RandomGroupApplicaitonPut
       </div>
       <div
         style={{
