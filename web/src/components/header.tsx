@@ -17,46 +17,50 @@ function Header() {
   return (
     <div
       style={{
+        position: 'sticky',
+        top:'0',
+        background: 'black',
+        height: '100px',
         display: 'flex',
+        paddingTop:'5px',
+        paddingBottom: '5px',
+        alignItems: 'center',
+        justifyContent: 'space-between',
       }}
     >
-      {/* <img src="img/logo_white.png" /> */}
-      {/* 로고 수정 후 재반영 예정 */}
-      <div
-        style={{
-          display: 'flex',
-        }}
-      >
-        <div>
-          <img src="img/introduction.png"/>
-        </div>
-        <div>
-          <img src="img/vision.png"/>
-        </div>
-        <div>
-          <img src="img/ouractivity.png"/>
-        </div>
-        <div>
-          <img src="img/more.png"/>
-        </div>
-      </div>
-      <div
-        style={{
-          display: 'flex',
-        }}
-      >
-        <div>
-          <img src="img/login.png"/>
-        </div>
-        <div>
-          <img src="img/signup.png"/>
-        </div>
-        <div>
-          <img src="img/manager.png"/>
+      <img style={{marginLeft: '10px',}}src="img/logo_white.svg"/>
+      <div>
+        <div
+          style={{
+            listStyle: 'none',
+            margin: '0',
+            padding: '0',
+            display: 'flex',
+          }}
+        >
+          <img style={ {flexBasis: '25%', marginRight: '60px',}}src="img/introduction.svg"/>
+          <img style={ {flexBasis: '25%', marginRight: '60px',}}src="img/vision.svg"/>
+          <img style={ {flexBasis: '25%', marginRight: '60px',}}src="img/ourActivity.svg"/>
+          <img style={ {flexBasis: '25%',}}src="img/more.svg"/>
         </div>
       </div>
       
-  
+      <div>
+        <div
+            style={{
+              listStyle: 'none',
+              marginRight: '50px',
+              padding: '0',
+              display: 'flex',
+            }}
+          >
+          <img style={ {flexBasis: '25%',marginRight: '20px',}} src="img/login.svg"/>
+          <img style={ {flexBasis: '25%',marginRight: '20px',}} src="img/signup.svg"/>
+          <img style={ {flexBasis: '25%',marginRight: '20px',}} src="img/headerLine.svg"/>
+          <img style={ {flexBasis: '25%',}} src="img/manager.svg"/>
+        </div>
+      </div>
+      
     </div>
     
   );
