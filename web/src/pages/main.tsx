@@ -18,7 +18,6 @@ function Main() {
         style={{
           width: '100%',
           height: '1px',
-          color: 'white',
         }}
       />
       <div
@@ -26,12 +25,42 @@ function Main() {
           background: 'black',
         }}
       >
-        <img
+        <div
           style={{
-            width: '100%',
+            display: 'flex',
+            position: 'relative',
           }}
-          src='img/main_background.svg'
-        />
+        >
+          <div
+            style={{
+              position: 'absolute',
+              color: 'white',
+              marginTop: '100px',
+              marginLeft: '100px',
+            }}
+          >
+            <div>
+              2023.07.20 ~ 2023.08.07
+            </div>
+            <div>
+              2023 F/F Season
+            </div>
+            <div>
+              Bowling Party
+            </div>
+            <div>
+              Participate
+            </div>
+          </div>
+          <img
+            style={{
+              width: '100%',
+            }}
+            src='img/main_background.svg'
+          />
+          
+        </div>
+        
         <img
           style={{
             width: '100%',
