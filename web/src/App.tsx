@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom'
 import Main from './pages/main';
-import Signin from './pages/signin';
-import Signup from './pages/signup';
+import Signin from './pages/main/signin';
+import Signup from './pages/main/signup';
 
 const App:React.FC = (): JSX.Element => {
   const onSubmit = (form: { name: string, description: string}) => {
