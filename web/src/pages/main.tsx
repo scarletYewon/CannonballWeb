@@ -28,7 +28,7 @@ function Main() {
         <div
           style={{
             display: 'flex',
-            position: 'relative',
+            // position: 'relative',
           }}
         >
           <div

@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import Header from "../components/header";
+import Header from "../../components/header";
 
 type MyFormProps = {
   onSubmit: (form: { name: string; description: string }) => void;
@@ -59,7 +59,6 @@ function Signin({ onSubmit }: MyFormProps) {
           height: '88vh',
           display: 'flex',
           alignItems: 'center',
-          background: '#f2f2f2',
         }}
       >
         <div
@@ -67,7 +66,11 @@ function Signin({ onSubmit }: MyFormProps) {
             margin: '0 auto'
           }}
         >
-          <img src="img/logocol.svg"/>
+          <img
+            style={{
+              height: '5.5em'
+            }}
+            src="img/logo_black.svg"/>
           <form
             onSubmit={handleSubmit}
           >
@@ -115,7 +118,7 @@ function Signin({ onSubmit }: MyFormProps) {
               <button
                 type="submit"
                 style={{
-                  width: '14.7em',
+                  width: '15.7em',
                   height: '2.5em',
                   backgroundColor: 'black',
                   textAlign: 'center',
@@ -131,27 +134,6 @@ function Signin({ onSubmit }: MyFormProps) {
               </button>
             </div>
           </form>
-          <div
-            style={{
-              display: 'flex',
-              marginTop: '.5em',
-            }}
-          >
-            <div
-              style={{
-                marginLeft: '1em',
-              }}
-            >
-              회원가입
-            </div>
-            <div
-              style={{
-                marginLeft: '6em',
-              }}
-            >
-              탈퇴하기
-            </div>
-          </div>
         </div>
       </div>
     </div>
