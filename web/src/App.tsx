@@ -10,6 +10,8 @@ import More from './pages/main/more';
 import Manager from './pages/managePages/managementMain'
 import Member from './pages/managePages/member';
 import Event from './pages/managePages/event';
+import Application from './pages/apply/application';
+import AppDone from './pages/apply/appDone';
 
 const App:React.FC = (): JSX.Element => {
   const onSubmit = (form: { name: string, description: string}) => {
@@ -27,6 +29,8 @@ const App:React.FC = (): JSX.Element => {
       <Route path='/manager' element={<Manager/>}/>
       <Route path='/managermember' element={<Member/>}/>
       <Route path='/managerevent' element={<Event/>}/>
+      <Route path='/application' element={<Application/>}/>
+      <Route path='/appdone' element={<AppDone/>}/>
     </Routes>
   );
 }
