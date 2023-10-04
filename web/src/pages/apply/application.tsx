@@ -8,6 +8,7 @@ function Application(){
       <Header/>
       <div
         style={{
+          height: '88vh',
           display: 'flex',
         }}
       >
@@ -16,8 +17,8 @@ function Application(){
         </div>
         <div
           style={{
+            margin: '0 auto',
             marginTop: '10em',
-            marginLeft: '4em',
           }}
         >
           <div
@@ -25,7 +26,6 @@ function Application(){
               textAlign: 'center',
               fontFamily: 'Inter',
               fontSize: '40px',
-              fontStyle: 'italic',
               fontWeight: '800',
               lineHeight: 'normal',
             }}  
@@ -40,6 +40,7 @@ function Application(){
               fontStyle: 'normal',
               fontWeight: '800',
               lineHeight: 'normal',
+              marginTop: '1em',
             }}
           >
             2023.09.01~2023.09.25
@@ -60,6 +61,14 @@ function Application(){
           </div>
           <div
             style={{
+              textAlign: 'center',
+              marginTop: '1em',
+            }}
+          >
+            <img src="img/line_appdone.svg"/> 
+          </div>
+          <div
+            style={{
               display: 'flex',
               width: '197px',
               height: '34px',
@@ -75,11 +84,11 @@ function Application(){
               fontStyle: 'italic',
               fontWeight: '800',
               lineHeight: 'normal',
-              marginTop: '2.5em',
+              marginTop: '3em',
               marginLeft: '2.5em',
             }}
           >
-            toParticipate
+            TO PARTICIPATE
           </div>
         </div>
       </div>
