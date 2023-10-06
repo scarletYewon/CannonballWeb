@@ -58,9 +58,7 @@ function Main() {
             }}
             src='img/main_background.svg'
           />
-          
         </div>
-        
         <img
           style={{
             width: '100%',
