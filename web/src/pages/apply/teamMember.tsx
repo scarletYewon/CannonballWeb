@@ -25,7 +25,6 @@ function TeamMember(){
               style={{
                 color: 'white',
                 textAlign: 'center',
-                fontFamily: 'Inter',
                 fontSize: '4em',
                 fontStyle: 'italic',
                 fontWeight: '800',
