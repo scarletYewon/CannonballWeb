@@ -27,8 +27,7 @@ function Teams(){
         </div>
         <div
           style={{
-            // background: 'white',
-            display: 'inline-block',
+            display: 'block',
           }}
         >
           <div
@@ -109,7 +108,7 @@ function Teams(){
         <div
           style={{
             // background: 'white',
-            display: 'inline-block',
+            display: 'block',
           }}
         >
           <div
